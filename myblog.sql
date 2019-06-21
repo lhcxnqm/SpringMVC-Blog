@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50726
 File Encoding         : 65001
 
-Date: 2019-06-19 22:18:55
+Date: 2019-06-21 23:16:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -52,7 +52,7 @@ CREATE TABLE `post` (
 -- ----------------------------
 -- Records of post
 -- ----------------------------
-INSERT INTO `post` VALUES ('7', 'python天下第一', 'python是实用性非常好的脚本语言，不接受任何反驳！', 'python', '34', '2019-06-19 22:16:00');
+INSERT INTO `post` VALUES ('7', 'python天下第一', 'python是实用性非常好的脚本语言，不接受任何反驳！', 'python', '35', '2019-06-20 13:11:26');
 INSERT INTO `post` VALUES ('8', '放屁，Java才是爹', '这个还用得着比吗？Java如此规范和严谨的语言，兼职就是锻炼你逻辑思维的必备语言，渣渣python安敢在此造次？', 'Java', '16', '2019-06-19 22:15:46');
 INSERT INTO `post` VALUES ('9', '扯淡，python牛逼不解释', '接受所有关于python的赞美，无视一切来自Java的恶人恶语，我为python代言，欧耶！', 'python', '11', '2019-06-19 22:15:37');
 INSERT INTO `post` VALUES ('12', 'C++的凝视', '我不想说话，各位大佬都好牛逼，我只想安静的做个美男子，好吗？？', 'C++', '8', '2019-06-19 22:12:41');
@@ -60,7 +60,7 @@ INSERT INTO `post` VALUES ('14', 'JS不服啊', '我JS被吃了嘛？！', 'JS',
 INSERT INTO `post` VALUES ('16', 'Golang没人理', '你们都不考虑萌新的感受！！！', 'Golang', '1', '2019-06-11 08:22:09');
 INSERT INTO `post` VALUES ('17', 'Java', '孩子们，爸爸懒得和你们吵', 'Java', '2', '2019-06-19 22:16:21');
 INSERT INTO `post` VALUES ('19', 'JS之美', '我要要测试测试测试………………', 'JS', '2', '2019-06-11 08:44:16');
-INSERT INTO `post` VALUES ('20', 'Java的爹', '放屁！黄家辉才是爹！', 'Java', '1', '2019-06-19 19:33:20');
+INSERT INTO `post` VALUES ('20', 'Java的爹', '哈哈放屁！黄家辉才是爹！', 'Java', '2', '2019-06-21 13:48:35');
 INSERT INTO `post` VALUES ('21', 'C语言的崛起', '老子是C，老子是C位！！！！！！！', 'C', '1', '2019-06-19 22:17:07');
 
 -- ----------------------------
@@ -71,14 +71,15 @@ CREATE TABLE `reply` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `content` varchar(1000) DEFAULT NULL,
   `username` varchar(1000) DEFAULT NULL,
-  `mobile` varchar(100) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of reply
 -- ----------------------------
+INSERT INTO `reply` VALUES ('1', '评论测试一', 'caixukun', 'Java的爹', '2019-06-21 11:58:43');
 
 -- ----------------------------
 -- Table structure for `user`
